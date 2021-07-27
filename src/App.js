@@ -1,5 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
+//import {HashRouter} from 'react-router-dom'
 import stores from './data/stores';
 import items from './data/items';
 import React from 'react';
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename = "/">
         <header className="App-header">
           <Route path="/" exact>
             <HomePage />
